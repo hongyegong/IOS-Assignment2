@@ -2,10 +2,9 @@
 //  Dealer.swift
 //  BlackJack
 //
-//  Created by 鸿烨 弓 on 15/2/11.
-//  Copyright (c) 2015年 鸿烨 弓. All rights reserved.
+//  Created by Hongye Gong on 15/2/11.
+//  Copyright (c) 2015 Hongye Gong. All rights reserved.
 //
-
 import UIKit
 import Foundation
 class Dealer : Person {
@@ -18,7 +17,8 @@ class Dealer : Person {
     
     //this is a dealer specific function, unhiding cards dealer has
     func unhide() -> Card? {
-        cards[0].cd = hiddenCard?.cd!
+        cards[0].image = hiddenCard?.image
+        hiddenCard?.image = UIImage(named: "hiddencard.jpg")
         return cards[0]
     }
     
@@ -38,3 +38,4 @@ class Dealer : Person {
         }
     }
 }
+

@@ -2,12 +2,9 @@
 //  Card.swift
 //  BlackJack
 //
-//  Created by 鸿烨 弓 on 15/2/11.
-//  Copyright (c) 2015年 鸿烨 弓. All rights reserved.
+//  Created by Hongye Gong on 15/2/11.
+//  Copyright (c) 2015 Hongye Gong. All rights reserved.
 //
-
-import Foundation
-
 
 import Foundation
 import UIKit
@@ -16,13 +13,13 @@ enum Suit: Character{
     func simpleDescription() -> String {
         switch self {
         case .Spades:
-            return "♠"
+            return "spades"
         case .Hearts:
-            return "♡"
+            return "hearts"
         case .Diamonds:
-            return "♢"
+            return "diamonds"
         case .Clubs:
-            return "♣"
+            return "clubs"
         }
     }
 }
@@ -33,13 +30,13 @@ enum Rank: Int {
     func simpleDescription() -> String {
         switch self {
         case .King:
-            return "K"
+            return "king"
         case .Queen:
-            return "Q"
+            return "queen"
         case .Jack:
-            return "J"
+            return "jack"
         case .Ace:
-            return "A"
+            return "ace"
         default:
             return "\(self.rawValue)"
         }
@@ -55,26 +52,26 @@ enum Rank: Int {
             return Values(first: 10, second: nil)
         default:
             return Values(first: self.rawValue, second: nil)
-        }
+            }
     }
 }
 struct Card {
     var currentCard:Int = 0
-    var cd:String?
+    var image:UIImage?
     var suit: Suit
     var rank: Rank
     var hidden:Bool = false
-    init(rank: Rank, suit: Suit, cardNum: String) {
+    init(rank: Rank, suit: Suit, imageFile: UIImage) {
         self.suit = suit
         self.rank = rank
-        self.cd = cardNum
+        self.image = imageFile
     }
     var description: String {
         var output = "\(suit.rawValue),"
-        output += "\(rank.values.first)"
-        if let second = rank.values.second {
-            output += " or \(second)"
-        }
-        return output
+            output += "\(rank.values.first)"
+            if let second = rank.values.second {
+                output += " or \(second)"
+            }
+            return output
     }
 }

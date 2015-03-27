@@ -1,9 +1,9 @@
 //
-//  shoe.swift
+//  Shoe.swift
 //  BlackJack
 //
-//  Created by 鸿烨 弓 on 15/2/11.
-//  Copyright (c) 2015年 鸿烨 弓. All rights reserved.
+//  Created by Hongye Gong on 15/2/11.
+//  Copyright (c) 2015 Hongye Gong. All rights reserved.
 //
 
 import Foundation
@@ -19,7 +19,6 @@ class Shoe {
             decks.append(tempDeck)
         }
     }
-    
     //adding a new deck to the Shoe
     func addDeck() {
         var newDeck:Deck = Deck()
@@ -41,5 +40,5 @@ class Shoe {
         }
     }
     
-    
+
 }
