@@ -32,7 +32,7 @@ class Game {
 //        
 //        //dealer's hidden card will be stored in a temporary variable, cardBack picture will replace it.
 //        dealer.hiddenCard = dealer.cards[0]
-//        dealer.cards[0].image = UIImage(named: "979a46ed6000168e916a6ef1230c9afb_large.jpg")    
+//        dealer.cards[0].image = UIImage(named: "hiddencard.jpg")
     }
     
     //adding new player to the game
@@ -66,7 +66,7 @@ class Game {
         
         //dealer's hidden card will be stored in a temporary variable, cardBack picture will replace it.
         dealer.hiddenCard = dealer.cards[0]
-        dealer.cards[0].image = UIImage(named: "979a46ed6000168e916a6ef1230c9afb_large.jpg")
+        dealer.cards[0].image = UIImage(named: "hiddencard.jpg")
     }
     //calls the hit function for player at playerNdx index
     func hit (playerNdx:Int) {

@@ -1178,8 +1178,14 @@
                                     <action selector="startGame:" destination="Bli-56-Pgu" eventType="touchUpInside" id="L6w-1p-v06"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BLAKJACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYd-kM-ggv">
+                                <rect key="frame" x="79" y="513" width="442.5" height="50.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-BoldItalic" family="Palatino" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="BlackjackCasinoLogo-300x300.png" translatesAutoresizingMaskIntoConstraints="NO" id="b3E-Qs-Dh4">
-                                <rect key="frame" x="180" y="28" width="234" height="176"/>
+                                <rect key="frame" x="182" y="20" width="234" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="234" id="CTH-77-rlU">
                                         <variation key="heightClass=regular-widthClass=regular" constant="427"/>
@@ -1193,15 +1199,20 @@
                         <color key="backgroundColor" red="0.098008596670000003" green="0.58033459600000004" blue="0.078264363670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="dKW-MU-tdF" secondAttribute="centerX" constant="-7" id="2ra-C0-5Kd"/>
+                            <constraint firstItem="NYd-kM-ggv" firstAttribute="leading" secondItem="pk5-M1-Lys" secondAttribute="leadingMargin" constant="63" id="9RS-To-Jcq"/>
                             <constraint firstAttribute="centerX" secondItem="40B-qY-ygF" secondAttribute="centerX" constant="-7" id="JMz-FE-n1z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NYd-kM-ggv" secondAttribute="trailing" constant="62.5" id="K5y-df-4DT"/>
                             <constraint firstAttribute="centerX" secondItem="JLu-g2-OlA" secondAttribute="centerX" constant="-7.5" id="McL-wr-Iqs"/>
-                            <constraint firstAttribute="centerY" secondItem="b3E-Qs-Dh4" secondAttribute="centerY" constant="184" id="Pog-Vv-OEx">
+                            <constraint firstItem="uYQ-to-bds" firstAttribute="top" secondItem="b3E-Qs-Dh4" secondAttribute="bottom" constant="22" id="Mcr-8D-mx5"/>
+                            <constraint firstAttribute="centerY" secondItem="b3E-Qs-Dh4" secondAttribute="centerY" constant="192" id="Pog-Vv-OEx">
                                 <variation key="heightClass=regular-widthClass=regular" constant="187.5"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="NYd-kM-ggv" secondAttribute="centerX" id="Rn1-IO-N8y"/>
                             <constraint firstAttribute="centerY" secondItem="uYQ-to-bds" secondAttribute="centerY" constant="70" id="Ssj-o7-fxD"/>
                             <constraint firstAttribute="centerY" secondItem="JLu-g2-OlA" secondAttribute="centerY" constant="-50" id="U6B-7O-aXq"/>
+                            <constraint firstItem="NYd-kM-ggv" firstAttribute="top" secondItem="0ZJ-F4-xR7" secondAttribute="bottom" constant="25" id="Vf2-BC-NbR"/>
                             <constraint firstAttribute="centerY" secondItem="40B-qY-ygF" secondAttribute="centerY" constant="14" id="XCu-OL-Efe"/>
-                            <constraint firstAttribute="centerX" secondItem="b3E-Qs-Dh4" secondAttribute="centerX" constant="3" id="ahD-b7-u4K">
+                            <constraint firstAttribute="centerX" secondItem="b3E-Qs-Dh4" secondAttribute="centerX" constant="1" id="ahD-b7-u4K">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-7.5"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="0ZJ-F4-xR7" secondAttribute="centerY" constant="-170" id="bKx-vA-bMS"/>

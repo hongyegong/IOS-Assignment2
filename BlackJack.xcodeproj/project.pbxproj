@@ -84,6 +84,7 @@
 		44FABC421AC4A45600ACA661 /* a5gjuf.png in Resources */ = {isa = PBXBuildFile; fileRef = 44FABC411AC4A45600ACA661 /* a5gjuf.png */; };
 		44FABC441AC4CDD800ACA661 /* BlackjackCasinoLogo-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 44FABC431AC4CDD800ACA661 /* BlackjackCasinoLogo-300x300.png */; };
 		44FABC461AC4D08800ACA661 /* whoturn.png in Resources */ = {isa = PBXBuildFile; fileRef = 44FABC451AC4D08800ACA661 /* whoturn.png */; };
+		44FABC481AC5F03A00ACA661 /* hiddencard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44FABC471AC5F03A00ACA661 /* hiddencard.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		44FABC411AC4A45600ACA661 /* a5gjuf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a5gjuf.png; sourceTree = "<group>"; };
 		44FABC431AC4CDD800ACA661 /* BlackjackCasinoLogo-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackjackCasinoLogo-300x300.png"; sourceTree = "<group>"; };
 		44FABC451AC4D08800ACA661 /* whoturn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whoturn.png; sourceTree = "<group>"; };
+		44FABC471AC5F03A00ACA661 /* hiddencard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hiddencard.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +306,7 @@
 		44C4440F1A8B1C6C0063D8E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44FABC471AC5F03A00ACA661 /* hiddencard.jpg */,
 				44FABC451AC4D08800ACA661 /* whoturn.png */,
 				44FABC411AC4A45600ACA661 /* a5gjuf.png */,
 				440408D91AC1E5070031C75B /* Playing Cards */,
@@ -460,6 +463,7 @@
 				440409341AC1E5070031C75B /* 9_of_clubs.jpg in Resources */,
 				440409461AC1E5070031C75B /* king_of_hearts.jpg in Resources */,
 				4404093C1AC1E5070031C75B /* black_joker.jpg in Resources */,
+				44FABC481AC5F03A00ACA661 /* hiddencard.jpg in Resources */,
 				440409161AC1E5070031C75B /* 10_of_hearts.jpg in Resources */,
 				440409201AC1E5070031C75B /* 4_of_clubs.jpg in Resources */,
 				440409431AC1E5070031C75B /* king_of_clubs.jpg in Resources */,
