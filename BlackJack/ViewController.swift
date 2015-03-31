@@ -240,6 +240,7 @@ class ViewController: UIViewController {
             while (blackjack.dealer.checkScore("s").intScore < 16) {blackjack.dealer.addCard(blackjack.getCard(blackjack.currentDeck)!)}
             dealerScore.text = blackjack.dealer.checkScore("a").strScore
             for i in 0..<plImages.count {for x in 0..<plImages[i].count {plImages[i][x].alpha = 0.1} }
+            for k in 0..<blackjack.dealer.cards.count {dealerImages[k].image = blackjack.dealer.cards[k].image}
             for i in 0..<dealerImages.count {dealerImages[i].alpha = 0.1}
             for i in 0..<blackjack.players.count { if !blackjack.players[i].isOut{
                     plScores[i].text = checkScore(blackjack.players[i].checkScore().intScore, dealerScore: blackjack.dealer.checkScore("a").intScore).str
