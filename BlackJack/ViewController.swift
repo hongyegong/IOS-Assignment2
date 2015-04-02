@@ -128,20 +128,30 @@ class ViewController: UIViewController {
     }
     
     func hitAI() {
+        var temp:Int = blackjack.players[blackjack.currentPlayer].checkScore().intScore
+        if ((temp >= 17 && blackjack.currentPlayer == 1) || blackjack.currentPlayer != 1) {
+            timer.invalidate()
+            timer.fire()
+            
+            if ( temp > 21) {
+                for x in 0..<blackjack.players[blackjack.currentPlayer].cards.count {plImages[blackjack.currentPlayer][x].alpha = 0.1}
+                plTurns[blackjack.currentPlayer].hidden = true
+                blackjack.stand(blackjack.currentPlayer)
+            };getPlayerStats()
+            if(temp <= 21) { standAI() }
+            return
+        }
         blackjack.hit(blackjack.currentPlayer)
         plImages[blackjack.currentPlayer][blackjack.players[blackjack.currentPlayer].cards.count - 1].alpha = 1
+        refresh()
         //println(blackjack.players[blackjack.currentPlayer].checkScore().intScore)
 //        if blackjack.players[blackjack.currentPlayer].checkScore().intScore >= 17 {
 //            self.timer.fire()
 //        }
         
         
-        var temp:Int = blackjack.players[blackjack.currentPlayer].checkScore().intScore
-        if ( temp > 21) {
-            for x in 0..<blackjack.players[blackjack.currentPlayer].cards.count {plImages[blackjack.currentPlayer][x].alpha = 0.1}
-            plTurns[blackjack.currentPlayer].hidden = true
-            blackjack.stand(blackjack.currentPlayer)
-        };getPlayerStats()
+        //temp = blackjack.players[blackjack.currentPlayer].checkScore().intScore
+        //getPlayerStats()
     }
     
     //stand function that calls players stand function
@@ -217,17 +227,25 @@ class ViewController: UIViewController {
             }
         }
         
-        if(blackjack.currentPlayer == 1 && firstin) {
+        if(blackjack.currentPlayer == 1 && firstin && blackjack.players[blackjack.currentPlayer].isOut == false) {
             firstin = false
             plBets[blackjack.currentPlayer].text = "20"
             
             blackjack.players[blackjack.currentPlayer].amount -= plBets[blackjack.currentPlayer].text.toInt()!
             //println(blackjack.players[blackjack.currentPlayer].amount)
-            while (blackjack.players[blackjack.currentPlayer].checkScore().intScore < 17 && blackjack.currentPlayer == 1) {
-                
-                hitAI()
+            if !timer.valid {
+                let aSelector : Selector = "hitAI"
+                timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
+                //startTime = NSDate.timeIntervalSinceReferenceDate()
             }
-            if blackjack.currentPlayer == 1 {standAI()}
+//            while (blackjack.players[blackjack.currentPlayer].checkScore().intScore < 17 && blackjack.currentPlayer == 1) {
+//                
+//                hitAI()
+//            }
+//            if !timer.valid && blackjack.currentPlayer == 1 && blackjack.players[blackjack.currentPlayer].stand == false {
+//                standAI()
+//            }
+//            println("test")
             
         }
         
@@ -237,7 +255,7 @@ class ViewController: UIViewController {
             dealerImages[0].image = blackjack.dealer.unhide()?.image
             plTurns[blackjack.currentPlayer].hidden = true
             hitButton.hidden = true;standButton.hidden = true
-            while (blackjack.dealer.checkScore("s").intScore < 16) {blackjack.dealer.addCard(blackjack.getCard(blackjack.currentDeck)!)}
+            while (blackjack.dealer.checkScore("s").intScore < 16 && blackjack.dealer.cards.count < 6) {blackjack.dealer.addCard(blackjack.getCard(blackjack.currentDeck)!)}
             dealerScore.text = blackjack.dealer.checkScore("a").strScore
             for i in 0..<plImages.count {for x in 0..<plImages[i].count {plImages[i][x].alpha = 0.1} }
             for k in 0..<blackjack.dealer.cards.count {dealerImages[k].image = blackjack.dealer.cards[k].image}
