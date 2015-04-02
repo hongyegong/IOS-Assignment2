@@ -8,7 +8,7 @@ New function added:
                     
 3.AI player added
 
-#Work after 3/20
+#Work after 3/30 11:00PM
 
 1. AI effect change
 2. Little UI change
