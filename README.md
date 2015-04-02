@@ -10,5 +10,5 @@ New function added:
 
 #Work after 3/20
 
-1. AI effect added
+1. AI effect change
 2. Little UI change
